@@ -1,0 +1,67 @@
+.ml40 {
+  margin-left: 40rpx;
+}
+.mr34 {
+  margin-right: 34rpx;
+}
+.swiper-tab {
+  display: flex;
+  padding: 10rpx 30rpx 0 30rpx;
+  background: #fff;
+}
+.swiper-tab .swiper-tab-list {
+  margin-right: 70rpx;
+  color: #5276d0;
+  padding-bottom: 16rpx;
+}
+.swiper-tab-list.on {
+  border-bottom: 5rpx solid #5276d0;
+}
+.my-motion-data {
+  padding: 0 30rpx;
+  line-height: 78rpx;
+}
+.data-list {
+  background: #fff;
+}
+.data-block {
+  height: 230rpx;
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #f4f5f7;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+  position: relative;
+}
+.data-block .map-route {
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 4rpx;
+  margin-right: 30rpx;
+}
+.data-block .icon {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 20rpx;
+}
+.font1 {
+  font-size: 74rpx;
+  color: #404961;
+}
+.font2 {
+  font-size: 32rpx;
+  color: #404961;
+  position:relative;
+  top:-12rpx;
+  margin-left:10px;
+}
+.arrow-right {
+  width: 14rpx;
+  height: 14rpx;
+  border-top: 2rpx solid #a8a8a8;
+  border-right: 2rpx solid #a8a8a8;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 30rpx;
+}

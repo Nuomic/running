@@ -1,0 +1,12 @@
+page {
+  background-color: #f4f5f7;
+  height: 100%;
+  font-size: 28rpx;
+  color: #333;
+}
+.dpf {
+  display: flex;
+}
+.dpn {
+  display: none;
+}

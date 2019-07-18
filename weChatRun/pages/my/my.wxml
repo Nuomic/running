@@ -1,0 +1,64 @@
+<view>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">3月</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">4月</view>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{78+40+230*arrLength}}rpx" bindchange="bindChange">
+    <swiper-item>
+      <view class="my-motion-data">
+        <text>{{motionData.currentMounth.date}}</text>
+        <text class="ml40">{{motionData.currentMounth.totalDistance}}公里</text>
+      </view>
+      <view class="data-list">
+        <block wx:for-items="{{motionData.currentMounth.list}}" wx:for-item="list" wx:key="*item">
+          <view class="data-block">
+            <image class="map-route" src="{{list.map}}"></image>
+            <view>
+              <view>{{list.date}} {{list.type}}</view>
+              <view><text class="font1">{{list.distance}}</text><text class="font2">公里</text></view>
+              <view class="dpf">
+                <view class="mr34">
+                  <image class="icon" src="../../image/icon-time.png"></image>
+                  <text>{{list.time}}</text>
+                </view>
+                <view>
+                  <image class="icon" src="../../image/icon-pace.png"></image>
+                  <text>{{list.pace}}</text>
+                </view>
+              </view>
+            </view>
+            <text class="arrow-right"></text>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="my-motion-data">
+        <text>{{motionData.lastMounth.date}}</text>
+        <text class="ml40">{{motionData.lastMounth.totalDistance}}公里</text>
+      </view>
+      <view class="data-list">
+        <block wx:for-items="{{motionData.lastMounth.list}}" wx:for-item="list" wx:key="*item">
+          <view class="data-block">
+            <image class="map-route" src="{{list.map}}"></image>
+            <view>
+              <view>{{list.date}} {{list.type}}</view>
+              <view><text class="font1">{{list.distance}}</text><text class="font2">公里</text></view>
+              <view class="dpf">
+                <view class="mr34">
+                  <image class="icon" src="../../image/icon-time.png"></image>
+                  <text>{{list.time}}</text>
+                </view>
+                <view>
+                  <image class="icon" src="../../image/icon-pace.png"></image>
+                  <text>{{list.pace}}</text>
+                </view>
+              </view>
+            </view>
+            <text class="arrow-right"></text>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

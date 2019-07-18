@@ -1,0 +1,39 @@
+<view>
+  <view class="run-head">
+    <view class="fs260">{{meters}}</view>
+    <view class="distance-font mt-56">距离(公里)</view>
+    <view class="run-detail">
+      <view class="w50p">
+        <view>{{time}}</view>
+        <view class="detail-font">时:分:秒</view>
+      </view>
+      <view class="w50p">
+        <view>{{speed}}</view>
+        <view class="detail-font">配速</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="run-ctrl">
+    <view class="opt-con" bindtap="music"><image class="music" src="../../image/music.png"></image></view>
+    <view wx:if="{{optState === 0}}" class="img-center" bindtap="startFn">
+      <image src="../../image/play.png"></image>
+      <view class="font">开始</view>
+    </view>
+    <view wx:if="{{optState === 1}}" class="img-center" bindtap="pauseFn">
+      <image src="../../image/pause.png"></image>
+      <view class="font">暂停</view>
+    </view>
+    <view wx:if="{{optState === 2}}" class="dpf">
+      <view class="img-center mr40" bindtap="continueFn">
+        <image src="../../image/play.png"></image>
+        <view class="font">继续</view>
+      </view>
+      <view class="img-center" bindtap="finishFn">
+        <image src="../../image/stop.png"></image>
+        <view class="font">结束</view>
+      </view>
+    </view >
+    <view class="opt-con" bindtap="openLocation"><image class="location" src="../../image/location.png"></image></view>
+  </view>
+</view>

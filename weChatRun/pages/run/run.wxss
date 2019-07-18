@@ -1,0 +1,73 @@
+page{
+  background: #1b1b1ba9;
+}
+.mr40 {
+  margin-right: 40rpx;
+}
+.run-head {
+  text-align: center;
+  background: #5c5959;
+  color: #fff;
+  padding: 50rpx 30rpx;
+}
+.fs260 {
+  font-size: 260rpx;
+}
+.mt-56 {
+  top: -56rpx;
+}
+.distance-font {
+  font-size: 36rpx;
+  opacity: 0.6;
+  position: relative;
+}
+.run-detail {
+  display: flex;
+  font-size: 60rpx;
+  margin-top: 40rpx;
+}
+.w50p {
+  width: 50%;
+}
+.run-detail .detail-font {
+  font-size: 32rpx;
+  opacity: 0.6;
+}
+
+.run-ctrl {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 82rpx;
+}
+.run-ctrl image {
+  width: 190rpx;
+  height: 190rpx;
+}
+.run-ctrl .img-center {
+  position: relative;
+}
+.img-center .font {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 10rpx;
+}
+.opt-con {
+  border-radius: 100%;
+  background: #e8e9eb;
+  text-align: center;
+  width: 76rpx;
+  height: 76rpx;
+}
+.opt-con .music {
+  width: 76rpx;
+  height: 76rpx;
+  border-radius: 38rpx;
+}
+.opt-con .location {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}

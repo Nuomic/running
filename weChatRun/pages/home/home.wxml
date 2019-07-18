@@ -1,0 +1,63 @@
+<view>
+  <view class="pg_head">
+    <image src="../../image/run-logo.png"></image>
+    <view>
+      <view class="title">交大团跑运动</view>
+      <view class="time">03-01 06:00  -  05-01 07:00</view>
+    </view>
+  </view>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">赛况</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">加油榜(3)</view>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{80+40+126+80+130*4}}rpx" bindchange="bindChange">
+    <swiper-item>
+      <view class="race-state">火热进行中</view>
+      <view class="userinfo">
+        <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        <view>
+          <view class="team">
+            <text>我的团队</text>
+            <text class="team-name">TeamB</text>
+            <text>加油！还有希望</text>
+          </view>
+          <view class="score">
+            <text>我的成绩</text>
+            <text class="my-score">308.23公里</text>
+          </view>
+        </view>
+      </view>
+
+      <block wx:for-items="{{teamObj}}" wx:for-item="team" wx:key="*item">
+        <view class="team-block">
+          <view class="team-name">{{team.name}}</view>
+          <view class="team-total">{{team.raceTotal}}公里</view>
+          <block wx:for-items="{{team.raceList}}" wx:for-item="teamList" wx:key="*item">
+            <view class="team-number">
+              <image class="team-avatar" src="{{teamList.avatar}}"></image>
+              <view class="team-member-detail">
+                <view class="team-member-name">{{teamList.name}}</view>
+                <view>总：<text class="team-member-total">{{teamList.total}}</text></view>
+                <view>周：<text class="team-member-week">{{teamList.week}} + {{teamList.today}}</text></view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </block>
+    </swiper-item>
+
+    <swiper-item>
+      <block wx:for-items="{{cheerObj}}" wx:for-item="cheer" wx:key="*item">
+        <view class="data-list">
+        <view class="data-block">
+        <view class='user'>
+          <view ><image class='cheer-icon' src='{{cheer.icon}}'></image> </view>
+           <view >{{cheer.name}}</view>
+        </view>
+        <view >{{cheer.value}}</view>
+        </view>
+        </view>
+      </block>
+    </swiper-item>
+  </swiper>
+</view>
